@@ -1,0 +1,59 @@
+﻿@model IEnumerable<tensinhvien.Models.nhanvien>
+
+@{
+    ViewBag.Title = "hienthi2";
+}
+
+<h2>hienthi2</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.manv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hoten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.donvi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.luongngay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.songay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.thunhap)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.manv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hoten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.donvi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.luongngay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.songay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.thunhap)
+        </td>
+
+    </tr>
+}
+
+</table>

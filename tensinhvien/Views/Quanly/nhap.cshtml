@@ -1,0 +1,36 @@
+﻿
+
+@{
+    ViewBag.Title = "nhap";
+}
+
+<h2>nhap</h2>
+<form action="hienthi" method="post">
+    Ma nhan vien <input type="text" name="manv" value="" />
+    Ho ten <input type="text" name="hoten" value="" />
+
+    Don vi     <select id="Segmentation" name="Segmentation">
+
+
+    @{
+        string[] m = { "tuan", "minh" };
+
+        foreach (var item in m)
+        { 
+    <option value="@item">@item</option>
+        }
+    }
+</select>
+
+
+
+
+    Luong ngay <input type="text" name="luongngay" value="" />
+    SO ngay  <input type="text" name="songay" value="" />
+    <input type="submit" name="Gui" value="Gui di" />
+
+</form>
+@Html.ActionLink("Ve list", "hienthi")
+
+
+  

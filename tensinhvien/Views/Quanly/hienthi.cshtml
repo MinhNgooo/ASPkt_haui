@@ -1,0 +1,31 @@
+﻿
+
+@{
+    ViewBag.Title = "hienthi";
+    List<tensinhvien.Models.nhanvien> li = ViewBag.li;
+}
+<link type="text/css" href="~/lamnhan.css" rel="stylesheet" />
+<h2>hienthi</h2>
+<table>
+    <tr>
+        <td>Ma nhan vien</td>
+        <td>Ho ten</td>
+        <td>Don vi</td>
+        <td>Luong ngay</td>
+        <td>So ngay</td>
+        <td>Thu nhap</td>
+    </tr>
+   
+    @foreach (var item in li)
+    {
+        <tr>
+            <td>@item.manv</td>
+            <td>@item.hoten</td>
+            <td>@item.donvi</td>
+            <td>@item.luongngay</td>
+            <td>@item.songay</td>
+            <td>@item.thunhap</td>
+        </tr>
+    }
+</table>
+@Html.ActionLink("Ve nhap", "nhap")
